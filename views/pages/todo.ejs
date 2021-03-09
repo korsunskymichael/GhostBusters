@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a class="active" href="/todo">To Do</a>
+    </div>
+</header>
+
+<main>
+    <table>   
+        <tr>
+            <th>Assignee</th>
+            <th>Description</th> 
+            <th>Finish Date</th>
+        </tr>
+        <% rows.forEach(function(row) { %>
+            <tr>
+                <td>
+                    <%= row.assignee %>
+                </td>    
+                
+                <td>
+                    <%= row.description %> 
+                </td>
+                
+                <td>
+                    <%= row.finish_date %>
+                </td>
+            </tr>
+        <% }); %>
+    </table> 
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

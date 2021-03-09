@@ -1,0 +1,58 @@
+.topnav {
+  overflow: hidden;
+  background-color: grey;
+}
+
+.topnav a{
+  float: left;
+  color: lightgrey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  background-color:#FC4B26;
+  color:white;
+  font-size: 40px; 
+  margin: 0; 
+}
+
+.main-music-video {
+  padding-left:34%;
+  padding-top:2%;
+}
+
+.footer-text {
+  padding-top:2%;
+}
+
+table {
+  padding-top:10%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  
+}
+th {
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: left;
+}
