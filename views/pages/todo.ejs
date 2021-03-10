@@ -13,28 +13,17 @@
 </header>
 
 <main>
-    <table>   
-        <tr>
-            <th>Assignee</th>
-            <th>Description</th> 
-            <th>Finish Date</th>
-        </tr>
-        <% rows.forEach(function(row) { %>
-            <tr>
-                <td>
-                    <%= row.assignee %>
-                </td>    
-                
-                <td>
-                    <%= row.description %> 
-                </td>
-                
-                <td>
-                    <%= row.finish_date %>
-                </td>
-            </tr>
-        <% }); %>
-    </table> 
+    <%- include('../partials/main_table'); %>
+    <br>
+    <br>
+    <br>
+    <%- include('../partials/add_to_table'); %>
+    <br>
+    <br>
+    <%- include('../partials/delete_by_id'); %>
+    <br>
+    <br>
+    <%- include('../partials/update_by_id'); %>
 </main>
 
 <footer>

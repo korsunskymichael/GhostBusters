@@ -16,23 +16,14 @@ var connection = mysql.createConnection({
 })
 
 
-
 // index page
 app.get('/', function(req, res) {
     res.render('pages/index');
 });
 
-// about page
+// todo page
 app.get('/todo', function(req, res) {
-    var ans;
-    connection.connect()
-    connection.query('SELECT * FROM todo', function (err, rows, fields) {
-        if (err) throw err
-        connection.end()
-        res.render('pages/todo', {rows: rows});
-    })
-    
-    
+    res.render('pages/todo');
 });
 
 
