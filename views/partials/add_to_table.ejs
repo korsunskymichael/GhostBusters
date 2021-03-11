@@ -1,9 +1,18 @@
 <h2>Add to todo list:</h2>
 
-<form id="add_to_table" action="/add" method="POST">
-    <label>Assignee:</label>
+<form id="add_to_table" action="/add_to_table" method="POST">
+    <label for="assignee">Assignee:</label>
     <br>
-    <input type="text" name="assignee" placeholder="Add name"></input>
+    <select id="add_to_table" id="assignee" name="assignee">
+        <option value="Peter Venkman">Peter Venkman</option>
+        <option value="Raymond Stantz">Raymond Stantz</option>
+        <option value="Dana Barrett">Dana Barrett</option>
+        <option value="Egon Spengler">Egon Spengler</option>
+        <option value="Louis Tully">Louis Tully</option>
+        <option value="Janine Melnitz">Janine Melnitz</option>
+        <option value="Walter Peck">Walter Peck</option>
+        <option value="Winston Zeddemore">Winston Zeddemore</option>
+    </select>
     <br>
     <br>
     <label>Description:</label>

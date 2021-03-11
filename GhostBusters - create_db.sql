@@ -18,4 +18,6 @@ values ("Peter Venkman",'fight Gozer The Gozerian','2020-05-04'),
 		("Egon Spengler",'fix the car', '2020-04-04'),
 		( 'Winston Zeddemore', 'study Sumerian culture', '2020-05-02');
         
-select * from todo;        
+select todo_id, assignee, description, date(finish_date) as finish_date, if(complete=0, "False", "True") as complete from todo;    
+INSERT INTO todo (assignee, description, finish_date) VALUES ('Dana Barrett', 'fgfgfggf', '20-03-2021');
+DELETE FROM todo WHERE assignee="Dana Barrett";

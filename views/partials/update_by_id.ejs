@@ -1,6 +1,6 @@
 <h2>Update todo list by an ID:</h2>
 
-<form id="update_table" action="/update" method="PUT">
+<form id="update_by_id" action="/update_by_id" method="POST">
     <label>ID:</label>
     <br>
     <input type="text" name="ID" placeholder="Add ID"></input>
@@ -8,10 +8,19 @@
     <br>
     <label>Assignee:</label>
     <br>
-    <input type="text" name="assignee" placeholder="Add name"></input>
+    <select name="assignee">
+        <option value="Peter Venkman">Peter Venkman</option>
+        <option value="Raymond Stantz">Raymond Stantz</option>
+        <option value="Dana Barrett">Dana Barrett</option>
+        <option value="Egon Spengler">Egon Spengler</option>
+        <option value="Louis Tully">Louis Tully</option>
+        <option value="Janine Melnitz">Janine Melnitz</option>
+        <option value="Walter Peck">Walter Peck</option>
+        <option value="Winston Zeddemore">Winston Zeddemore</option>
+    </select>
     <br>
     <br>
-    <label>Description:</label>
+    <label class="description">Description:</label>
     <br>
     <input type="text" name="description" placeholder="Add description"></input>
     <br>
