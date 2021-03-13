@@ -25,7 +25,7 @@ app.get('/', function(req, res) {
     res.render('pages/index');
 });
 
-// todo page
+// main table in todo page
 app.get('/todo', function(req, res) {
     const queryString = 'select todo_id, assignee, description, finish_date, if(complete=0, "False", "True") as complete from todo;'
 
@@ -44,7 +44,7 @@ app.post('/add_to_table', function(req, res) {
     const finish_date = req.body.finish_date;
 
 
-    const queryString = "INSERT INTO todo (assignee, description, finish_date) VALUES ('" + String(assignee) + "', '" + String(description) + "', '" + finish_date + "');"
+    const queryString = "INSERT INTO todo (assignee, description, finish_date) VALUES ('" + String(assignee) + "', '" + String(description) + "', '" + String(finish_date) + "');"
     console.log(queryString)
 
     connection.query(queryString, (err, rows, fields) => {
@@ -71,8 +71,7 @@ app.post('/update_by_id', function(req, res) {
     const description = req.body.description;
     const finish_date = req.body.finish_date;
 
-
-    const queryString = "UPDATE todo SET assignee='" + assignee + "', description='" + description + "', finish_date='" + finish_date + "' WHERE todo_id=" + id + ";"
+    const queryString = "UPDATE todo SET assignee='" + String(assignee) + "', description='" + String(description) + "', finish_date='" + String(finish_date) + "' WHERE todo_id=" + id + ";"
     console.log(queryString)
 
     connection.query(queryString, (err, rows, fields) => {
@@ -80,6 +79,19 @@ app.post('/update_by_id', function(req, res) {
     })
   })
 
+//complete
+app.post('/complete_by_id', function(req, res) {
+    const id = req.body.ID;
+
+    const queryString = "UPDATE todo SET complete='" + String(1) + "' WHERE todo_id=" + id + ";"
+    console.log(queryString)
+
+    connection.query(queryString, (err, rows, fields) => {
+        res.redirect('/todo')
+    })
+  })  
+
 app.listen(port, function() {
     console.log('Server listening on port ' + port + '...');
 });
+

@@ -13,22 +13,54 @@
 </header>
 
 <main>
+    
     <%- include('../partials/main_table'); %>
     <br>
     <br>
     <br>
-    <%- include('../partials/add_to_table'); %>
+    <button class="open-button" onclick="openForm('add_to_table')">Add</button>
+    <div class="form-popup" id="add_to_table">
+        <%- include('../partials/add_to_table'); %>
+        <button type="button" class="btn_cancel" onclick="closeForm('add_to_table')">Close</button>
+    </div>
+    <br>
+    <br>    
+    <button class="open-button" onclick="openForm('delete_by_id')">Delete</button>
+    <div class="form-popup" id="delete_by_id">
+        <%- include('../partials/delete_by_id'); %>
+        <button type="button" class="btn_cancel" onclick="closeForm('delete_by_id')">Close</button>
+    </div>
     <br>
     <br>
-    <%- include('../partials/delete_by_id'); %>
+    <button class="open-button" onclick="openForm('update_by_id')">Update</button>
+    <div class="form-popup" id="update_by_id">
+        <%- include('../partials/update_by_id'); %>
+        <button type="button" class="btn_cancel" onclick="closeForm('update_by_id')">Close</button>
+    </div>
     <br>
     <br>
-    <%- include('../partials/update_by_id'); %>
+    <button class="open-button" onclick="openForm('complete_by_id')">Complete</button>
+    <div class="form-popup" id="complete_by_id">
+        <%- include('../partials/complete_by_id'); %>
+        <button type="button" class="btn_cancel" onclick="closeForm('complete_by_id')">Close</button>
+    </div>
 </main>
 
 <footer>
     <%- include('../partials/footer'); %>
 </footer>
+
+
+<script>
+    function openForm(form) {
+        document.getElementById(form).style.display = "block";
+    }
+    
+    function closeForm(form) {
+        document.getElementById(form).style.display = "none";
+    } 
+</script>
+
 
 </body>
 </html>

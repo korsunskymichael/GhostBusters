@@ -1,9 +1,9 @@
 <h2>Add to todo list:</h2>
 
-<form id="add_to_table" action="/add_to_table" method="POST">
+<form id="add_to_table" action="/add_to_table" class="form-container" method="POST">
     <label for="assignee">Assignee:</label>
     <br>
-    <select id="add_to_table" id="assignee" name="assignee">
+    <select id="assignee" name="assignee">
         <option value="Peter Venkman">Peter Venkman</option>
         <option value="Raymond Stantz">Raymond Stantz</option>
         <option value="Dana Barrett">Dana Barrett</option>
@@ -17,7 +17,7 @@
     <br>
     <label>Description:</label>
     <br>
-    <input type="text" name="description" placeholder="Add description"></input>
+    <textarea type="text" name="description" placeholder="Add description" style="width:200px"></textarea>
     <br>
     <br>
     <label>Finish date:</label>
@@ -25,5 +25,5 @@
     <input type="text" name="finish_date" placeholder="Add finish date"></input>
     <br>
     <br>
-    <input type="submit" value="Submit">
+    <input class="submit-button" type="submit" value="Submit">
 </form>

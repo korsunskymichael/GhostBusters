@@ -23,15 +23,18 @@
 }
 
 h1 {
-  background-color:#FC4B26;
+  background-color:rgb(228, 34, 34);
   color:white;
   font-size: 40px; 
   margin: 0; 
+  text-align: center;
 }
 
-.main-music-video {
-  padding-left:34%;
-  padding-top:2%;
+h2 {
+  
+  text-decoration: underline black; 
+  color:rgb(228, 34, 34);
+  text-align: center;
 }
 
 .footer-text {
@@ -40,20 +43,124 @@ h1 {
 
 table {
   padding-top:10%;
+  margin-bottom: 5%;
+  margin-left: 25%;
   border: 1px solid black;
   border-collapse: collapse;
+  background-color:white;
 }
 
 td {
   padding: 5px;
   border: 1px solid black;
   border-collapse: collapse;
+  color: black;
   
 }
 th {
   padding: 5px;
   border: 1px solid black;
   border-collapse: collapse;
-  text-align: left;
+  text-align: center;
 }
 
+.open-button {
+  background-color: rgb(228, 34, 34);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  opacity: 0.8;
+  position: center;
+  width: 280px;
+  margin-left:35%;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  width:50%;
+  margin:0;
+  position:relative;
+  border: 3px solid #272525;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.btn_cancel {
+  background-color: rgb(228, 34, 34);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  width: 10%;
+  margin-left:45%;
+  opacity: 0.8;
+}
+
+.submit-button {
+  background-color: rgb(228, 34, 34);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  width: 70%;
+  margin-left:5%;
+  opacity: 0.8;
+}
+
+
+#table-scroll {
+  height:250px;
+  overflow:auto;  
+  margin-left:15%;
+  margin-right:30%;
+  margin-top:20px;
+  
+}
+#table-wrapper table {
+  width:80%;
+}
+
+.column-left {
+  background-color:rgb(228, 34, 34);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column-left {
+  float: left;
+  width: 70%;
+  padding: 5px;
+}
+
+.column-right {
+  float: left;
+  width: 30%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
