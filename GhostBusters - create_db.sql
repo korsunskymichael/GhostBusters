@@ -35,6 +35,6 @@ VALUES ('Peter Venkman'),
         ('Walter Peck'),
 		( 'Winston Zeddemore');
 
-
+select * from todo;
         
 
