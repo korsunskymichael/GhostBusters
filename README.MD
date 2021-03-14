@@ -37,7 +37,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
 5) open server.js file, and set the correct local mySql connection settings 
    (user, password). 
 
-   db: ghostbusters
+   <ins>db:</ins> ghostbusters
 
    <ins>example:</ins>
 
@@ -107,6 +107,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
     1.5) <ins>Completed:</ins> contains two possible values (true/false), depends if the assignment completed or not.
 
     <ins>The to do table:</ins>
+
     ![alt text](public/todo-table.PNG)
 
 2) Four Forms buttons: Add, Delete, Update, Complete.  while pressing on one of those buttons a new form window is opened.
