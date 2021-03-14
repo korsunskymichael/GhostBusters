@@ -41,7 +41,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
 
    <ins>example:</ins>
 
-   ![alt text](public/mysql-settings.PNG)
+   ![alt text](public/images/mysql-settings.PNG)
 
 5) Install mySql server:
 ```sh
@@ -66,7 +66,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
 
 4) If everything is fine, you should see this page:
 
-    ![alt text](public/main-page.png)
+    ![alt text](public/images/main-page.png)
 
 
 ## Possible authentication error
@@ -88,7 +88,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
 
 **In the browser enter the todo page. You should see the following:**
 
-![alt text](public/todo-page.PNG)
+![alt text](public/images/todo-page.PNG)
 
 **The page contain two main parts:**
 
@@ -108,7 +108,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
 
     <ins>The to do table:</ins>
 
-    ![alt text](public/todo-table.PNG)
+    ![alt text](public/images/todo-table.PNG)
 
 2) Four Forms buttons: Add, Delete, Update, Complete.  while pressing on one of those buttons a new form window is opened.
 
@@ -121,7 +121,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
         2.1.3) Press 'close' button to close the form.
     
     
-    ![alt text](public/add-form.PNG)
+    ![alt text](public/images/add-form.PNG)
 
     2.2) <ins>Delete:</ins>
         
@@ -131,7 +131,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
         
         2.2.3) Press 'close' button to close the form.
 
-    ![alt text](public/delete-form.PNG)    
+    ![alt text](public/images/delete-form.PNG)    
 
     2.3) <ins>Update:</ins>
         
@@ -140,7 +140,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
         2.3.2) After pressing the submit button, (if the ID is valid) a row with the specified id will be updated in the to do table (only if at least one additional value was specified by user (Assignee/Description/Finish Date)). 
 
         2.3.3) Press 'close' button to close the form.
-    ![alt text](public/update-form.PNG) 
+    ![alt text](public/images/update-form.PNG) 
 
 
     2.4) <ins>Complete:</ins>
@@ -150,7 +150,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
         2.4.2) After pressing the submit button, (if the ID is valid) the status of a row with the specified id will be set to 'True' (assignment completed).
         
         2.2.3) Press 'close' button to close the form.
-    ![alt text](public/complete-form.PNG)     
+    ![alt text](public/images/complete-form.PNG)     
 
 ## Authors:
 🐧 Michael Korsunsky, Matan Levi
