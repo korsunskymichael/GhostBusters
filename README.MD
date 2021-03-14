@@ -40,7 +40,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
    db: ghostbusters
 
    example:
-   ![alt text](\public\mysql-settings.PNG)
+   ![alt text](public/mysql-settings.PNG)
 
 5) Install mySql server:
 ```sh
@@ -65,7 +65,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
 
 4) If everything is fine, you should see this page:
 
-    ![alt text](\public\main-page.png)
+    ![alt text](public/main-page.PNG)
 
 
 ## Possible authentication error
@@ -87,7 +87,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
 
 **In the browser enter the todo page. You should see the following:**
 
-![alt text](\public\todo-page.png)
+![alt text](public/todo-page.PNG)
 
 **The page contain two main parts:**
 
@@ -106,7 +106,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
     1.5) <ins>Completed:</ins> contains two possible values (true/false), depends if the assignment completed or not.
 
     <ins>The to do table:</ins>
-    ![alt text](\public\todo-table.png)
+    ![alt text](public/todo-table.PNG)
 
 2) Four Forms buttons: Add, Delete, Update, Complete.  while pressing on one of those buttons a new form window is opened.
 
@@ -129,7 +129,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
         
         2.2.3) Press 'close' button to close the form.
 
-    ![alt text](\public\delete-form.png)    
+    ![alt text](public/delete-form.PNG)    
 
     2.3) <ins>Update:</ins>
         
@@ -138,7 +138,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
         2.3.2) After pressing the submit button, (if the ID is valid) a row with the specified id will be updated in the to do table (only if at least one additional value was specified by user (Assignee/Description/Finish Date)). 
 
         2.3.3) Press 'close' button to close the form.
-    ![alt text](\public\update-form.png) 
+    ![alt text](public/update-form.PNG) 
 
 
     2.4) <ins>Complete:</ins>
@@ -148,7 +148,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
         2.4.2) After pressing the submit button, (if the ID is valid) the status of a row with the specified id will be set to 'True' (assignment completed).
         
         2.2.3) Press 'close' button to close the form.
-    ![alt text](/public/complete-form.png)     
+    ![alt text](public/complete-form.PNG)     
 
 #### Author
 🐧 **Michael Korsunsky**, **Matan Levi**
