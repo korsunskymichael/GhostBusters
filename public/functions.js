@@ -40,6 +40,13 @@ function validDate(finish_date) {
 function validID(id, idsArray) {
     var valid = false;
     
+    try {
+         x = parseInt(id)
+    } 
+    catch (error) {
+        return valid;
+    }
+
     // validating that the id is a positive number, no need to check for float numbers because of 'auto increment' settings in mysql (id is always incremented by 1)
     if (parseInt(id) >0) {
         //validating that the id is found in the ids drom the todo table
