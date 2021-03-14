@@ -39,7 +39,8 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
 
    db: ghostbusters
 
-   example:
+   <ins>example:</ins>
+
    ![alt text](public/mysql-settings.PNG)
 
 5) Install mySql server:
@@ -65,7 +66,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
 
 4) If everything is fine, you should see this page:
 
-    ![alt text](public/main-page.PNG)
+    ![alt text](public/main-page.png)
 
 
 ## Possible authentication error
