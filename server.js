@@ -35,15 +35,16 @@ app.get('/', function(req, res) {
 // main table in todo page
 app.get('/todo', function(req, res) {
     //query for all rows from todo table required for main_table
-    const queryString = 'SELECT todo_id, assignee, description, finish_date, if(complete=0, "False", "True") as complete FROM todo;'
+    const queryTableString = 'SELECT todo_id, assignee, description, finish_date, if(complete=0, "False", "True") as complete FROM todo;'
     
-    connection.query(queryString, function (err, rows, fields) {
-        if (err) throw err
-        console.log("Query: " + queryString);
-        res.render('pages/todo', {rows: rows});
-    })        
-});
 
+    connection.query(queryTableString, function (err, rows, fields) {
+        if (err) throw err
+        console.log("Query: " + queryTableString);
+        res.render('pages/todo', {tableRows: rows });
+    })     
+});  
+      
 
 // add a row to todo list
 app.post('/add_to_table', function(req, res) {
@@ -54,14 +55,21 @@ app.post('/add_to_table', function(req, res) {
     //validating that the inserted value for finish date is valid (if not, a relevant error is printed in console)
     var dateValidity = functions.validDate(finish_date);
 
-    // finish_date is required
-    if (dateValidity == true){
-        const queryString = "INSERT INTO todo (assignee, description, finish_date) VALUES ('" + String(assignee) + "', '" + String(description) + "', '" + String(finish_date) + "');"
-        console.log("Query: " + queryString);
+    //description length is maximum of 500 characters (mysql settings)
+    if (description.length <= 500) {
+        // finish_date is required
+        if (dateValidity == true){
+            const queryString = "INSERT INTO todo (assignee, description, finish_date) VALUES ('" + String(assignee) + "', '" + String(description) + "', '" + String(finish_date) + "');"
+            console.log("Query: " + queryString);
 
-        connection.query(queryString, (err, rows, fields) => {
-            res.redirect('/todo')
-        })
+            connection.query(queryString, (err, rows, fields) => {
+                res.redirect('/todo')
+            })
+        }
+    }
+    else {
+        console.log("ERROR: Too long description. maximum use of characters is 500")
+
     }
 });
 
@@ -101,31 +109,43 @@ app.post('/update_by_id', function(req, res) {
     const description = req.body.description;
     const finish_date = req.body.finish_date;
     
-    // building the Object array to be sent to 'validUpdate' function
-    var validityObjectArray = {"todo_id": String(id), "assignee": String(assignee), "description": String(description), "finish_date": String(finish_date)}
-    // query to find all id's placed in todo list
-    var idValidityQueryString = "SELECT todo_id FROM todo;"
-    
-    connection.query(idValidityQueryString, (err, rows, fields) => {
-        var valid = functions.validID(id, rows);
-        /* 
-            checking if the given id is existing in the current id's placed in the todo table (if it does, boolean "true" value returned or vice versa) 
-            if flase returned: the 'queryString' is not executed
-        */
-        if (valid == true){
-            // checking the values of assignee, description, finish_date (if an empty String value returned, 'validQueryString' query is not executed )
-            var validQueryString = functions.validUpdate(validityObjectArray);
-            if (validQueryString != ""){
-                connection.query(validQueryString, (err, rows, fields) => {
-                    console.log("Query: " + validQueryString)
-                    res.redirect('/todo')
-                })
+    //description length is maximum of 500 characters (mysql settings)
+    if (description.length <= 500) {
+        
+        // building the Object array to be sent to 'validUpdate' function
+        var validityObjectArray = {"todo_id": String(id), 
+                                   "assignee": String(assignee),
+                                   "description": String(description),
+                                   "finish_date": String(finish_date)}
+
+        // query to find all id's placed in todo list
+        var idValidityQueryString = "SELECT todo_id FROM todo;"
+        
+        connection.query(idValidityQueryString, (err, rows, fields) => {
+            var valid = functions.validID(id, rows);
+            /* 
+                checking if the given id is existing in the current id's placed in the todo table (if it does, boolean "true" value returned or vice versa) 
+                if flase returned: the 'queryString' is not executed
+            */
+            if (valid == true){
+                // checking the values of assignee, description, finish_date (if an empty String value returned, 'validQueryString' query is not executed )
+                var validQueryString = functions.validUpdate(validityObjectArray);
+                if (validQueryString != ""){
+                    connection.query(validQueryString, (err, rows, fields) => {
+                        console.log("Query: " + validQueryString)
+                        res.redirect('/todo')
+                    })
+                }
             }
-        }
-        else {
-            console.log("ERROR: ID not found in todo table")
-        }
-    })     
+            else {
+                console.log("ERROR: ID not found in todo table")
+            }
+        }) 
+    }  
+    else {
+        console.log("ERROR: Too long description. maximum use of characters is 500")
+
+    }      
 });
 
 
@@ -157,6 +177,6 @@ app.post('/complete_by_id', function(req, res) {
 
 
 app.listen(port, function() {
-    console.log('Server listening on port ' + port + '...');
+    console.log('INFO: Server listening on port ' + port + '...');
 });
 

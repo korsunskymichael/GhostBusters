@@ -33,7 +33,7 @@ function validDate(finish_date) {
 /*
     name: validID function
     parameters: id - a String value
-                idsArray - an object array, consisting of all ids placed in the todo table
+                idsArray - an object array, containing of all ids placed in the todo table
     output: valid - a boolean value
 */
 
@@ -60,7 +60,7 @@ function validID(id, idsArray) {
 
 /*
     name: validUpdate function
-    parameters: validityObjectArray - an Object array consisting of (todo_id, assignee, description, finish_date) as keys,
+    parameters: validityObjectArray - an Object array containing of (todo_id, assignee, description, finish_date) as keys,
                                       and their values as values
     output: query - a String value
 */

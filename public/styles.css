@@ -57,9 +57,9 @@ h2 {
 
 table {
   padding-top:10%;
-  margin-top: 0.5%;
+  margin-top: 2.7%;
   margin-bottom: 5%;
-  margin-left: 25%;
+  margin-left: 2.7%;
   border: 1px solid black;
   border-collapse: collapse;
   background-color:white;
@@ -138,13 +138,13 @@ th {
 #table-scroll {
   height:250px;
   overflow:auto;  
-  margin-left:15%;
+  margin-left:27.5%;
   margin-right:30%;
   margin-top:20px;
   
 }
 #table-wrapper table {
-  width:80%;
+  width:100%;
 }
 
 * {

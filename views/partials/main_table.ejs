@@ -1,4 +1,4 @@
-<h2 class="h2-todo">To Do List:</h2>
+<h2 class="h2-todo">To Do Table:</h2>
 
 <div class="row">    
     <div class="column-left">
@@ -10,7 +10,7 @@
                     <th>Description</th> 
                     <th>Finish Date</th>
                     <th>Completed?</th>
-                    <% rows.forEach(function(row) { %>
+                    <% tableRows.forEach(function(row) { %>
                         <tr >
                             <td id="table-id">
                                 <%= row.todo_id %>
