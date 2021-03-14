@@ -119,7 +119,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
         2.1.3) Press 'close' button to close the form.
     
     
-    ![alt text](\public\add-form.png)
+    ![alt text](public/add-form.PNG)
 
     2.2) <ins>Delete:</ins>
         
