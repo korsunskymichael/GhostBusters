@@ -37,12 +37,27 @@ h2 {
   text-align: center;
 }
 
+.h2-todo {
+  text-decoration: underline black; 
+  color:rgb(228, 34, 34);
+  text-align: center;
+  margin-right:47%;
+}
+
+.h2-contact {
+  text-decoration: underline black; 
+  color:rgb(228, 34, 34);
+  text-align: center;
+  margin-left: 18%;
+}
+
 .footer-text {
   padding-top:2%;
 }
 
 table {
   padding-top:10%;
+  margin-top: 0.5%;
   margin-bottom: 5%;
   margin-left: 25%;
   border: 1px solid black;
@@ -72,14 +87,14 @@ th {
   opacity: 0.8;
   position: center;
   width: 280px;
-  margin-left:35%;
+  margin-left:23.5%;
 }
 
 .form-popup {
   display: none;
   position: fixed;
   width:50%;
-  margin:0;
+  margin-left:23.5%;
   position:relative;
   border: 3px solid #272525;
   z-index: 9;
@@ -91,7 +106,7 @@ th {
   background-color: white;
 }
 
-.form-container input[type=text] {
+.form-container input[type=text], textarea, select {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -115,7 +130,7 @@ th {
   padding: 16px 20px;
   border: none;
   width: 70%;
-  margin-left:5%;
+  margin-left:15.1%;
   opacity: 0.8;
 }
 
@@ -132,23 +147,21 @@ th {
   width:80%;
 }
 
-.column-left {
-  background-color:rgb(228, 34, 34);
-}
-
 * {
   box-sizing: border-box;
 }
 
 .column-left {
+  background-color:rgb(228, 34, 34);
   float: left;
-  width: 70%;
+  width: 81.3%;
   padding: 5px;
+  margin-top: 0.3%;
 }
 
 .column-right {
   float: left;
-  width: 30%;
+  width: 18.7%;
   padding: 5px;
 }
 
