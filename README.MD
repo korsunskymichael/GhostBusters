@@ -1,7 +1,7 @@
 # GhostBusters To Do Table!
 
 ## Intro
-With paranormal ghost cases on the increase, our justice fighters must receive a helpful tool to deal with all those assignments. Our 'GhostBusters to do table' lives to ease the lives of the ghostbusters, and make their assignment easier to track, update, delete and add.
+With paranormal ghost cases on the increase, our justice fighters must receive a helpful tool to deal with all those assignments. Our 'GhostBusters to do table' lives to ease their lives, and make the assignments easier to track, update, delete and add.
 
 ## Installation
 
