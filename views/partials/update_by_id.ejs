@@ -1,7 +1,8 @@
-<h2>Update todo list by an ID:</h2>
+<h2>Update an assignment in todo list by an ID:</h2>
 
 <form id="update_by_id" action="/update_by_id" class="form-container" method="POST">
     <label>ID:</label>
+    <span class="required">*</span>
     <br>
     <input type="text" name="ID" placeholder="Add ID"></input>
     <br>
@@ -30,6 +31,10 @@
     <br>    
     <input type="text" name="finish_date" placeholder="Add finish date"></input>
     <br>
+    <br>
+    <p aria-hidden="true" id="required-description">
+        <span class="required">*</span>Required field
+    </p>
     <br>
     <input type="submit" class="submit-button" value="Submit">
 </form>

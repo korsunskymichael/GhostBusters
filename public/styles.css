@@ -177,3 +177,7 @@ th {
   margin-top: 6px;
   padding: 20px;
 }
+
+.required {
+  color: rgb(228, 34, 34);
+}

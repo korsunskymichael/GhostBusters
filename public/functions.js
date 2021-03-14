@@ -83,7 +83,7 @@ function validUpdate(validityObjectArray){
     }
     
     // deleting empty values from the arrays
-    for (var i=0; i<values.length-1; i++) {
+    for (var i=0; i < values.length; i++) {
         if (values[i] == "") {
             values.splice(i, 1);
             keys.splice(i, 1);

@@ -54,6 +54,7 @@ app.post('/add_to_table', function(req, res) {
     //validating that the inserted value for finish date is valid (if not, a relevant error is printed in console)
     var dateValidity = functions.validDate(finish_date);
 
+    // finish_date is required
     if (dateValidity == true){
         const queryString = "INSERT INTO todo (assignee, description, finish_date) VALUES ('" + String(assignee) + "', '" + String(description) + "', '" + String(finish_date) + "');"
         console.log("Query: " + queryString);

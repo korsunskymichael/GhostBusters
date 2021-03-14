@@ -1,10 +1,15 @@
-<h2>Delete from todo list by an ID:</h2>
+<h2>Complete an assignment in todo list by an ID:</h2>
 
 <form id="complete_by_table" action="/complete_by_id" class="form-container" method="POST">
     <label>ID:</label>
+    <span class="required">*</span>
     <br>
     <input type="text" name="ID" placeholder="Add ID"></input>
     <br>
+    <br>
+    <p aria-hidden="true" id="required-description">
+        <span class="required">*</span>Required field
+    </p>
     <br>
     <input type="submit" class="submit-button" value="Submit">
 </form>
