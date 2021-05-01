@@ -153,4 +153,4 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
     ![alt text](public/images/complete-form.PNG)     
 
 ## Authors:
-🐧 Michael Korsunsky, Matan Levi
+🐧 Michael Korsunsky
