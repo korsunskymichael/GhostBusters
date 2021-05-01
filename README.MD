@@ -149,7 +149,7 @@ With paranormal ghost cases on the increase, our justice fighters must receive a
         
         2.4.2) After pressing the submit button, (if the ID is valid) the status of a row with the specified id will be set to 'True' (assignment completed).
         
-        2.2.3) Press 'close' button to close the form.
+        2.4.3) Press 'close' button to close the form.
     ![alt text](public/images/complete-form.PNG)     
 
 ## Authors:
